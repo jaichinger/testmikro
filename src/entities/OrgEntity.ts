@@ -14,6 +14,7 @@ export class OrgEntity {
     entity: () => Organisation,
     mapToPk: true,
     default: null,
+    primary: true,
   })
   orgId!: string;
 
