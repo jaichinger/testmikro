@@ -1,20 +1,14 @@
 import { ManyToOne, Property } from "@mikro-orm/postgresql";
 import { Organisation } from "./Organisation";
 
-const currentOrg = () => {
-  return (
-    "00000000-0000-0000-0000-00000000000" +
-    Math.floor(Math.random() * 2 + 1).toString()
-  );
-};
-
+const currentOrg = () => "00000000-0000-0000-0000-000000000001";
 export class OrgEntity {
   @ManyToOne({
-    fieldName: "org_id",
     entity: () => Organisation,
+    primary: true,
+    fieldName: "org_id",
     mapToPk: true,
     default: null,
-    primary: true,
   })
   orgId!: string;
 
