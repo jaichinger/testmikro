@@ -25,13 +25,7 @@ const run = async () => {
 
   const em = orm.em;
 
-  const c = await em.find(
-    EntityC,
-    {
-      a: [1n, "00000000-0000-0000-0000-000000000001"],
-    },
-    { populate: ["a"] }
-  );
+  const c = await em.findAll(EntityC, { populate: ["a"] });
 
   console.log(
     c,
