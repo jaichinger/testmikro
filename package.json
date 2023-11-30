@@ -4,19 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node main.ts"
   },
   "author": "James Aichinger",
   "license": "ISC",
   "devDependencies": {
-    "@mikro-orm/cli": "^6.0.0-dev.104",
+    "@mikro-orm/cli": "^6.0.0-rc.2",
     "@types/node": "^18.0.0",
     "@types/pg": "^8.10.2",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@mikro-orm/postgresql": "^6.0.0-dev.104",
-    "@mikro-orm/seeder": "^6.0.0-dev.104",
+    "@mikro-orm/core": "^6.0.0-rc.2",
+    "@mikro-orm/postgresql": "^6.0.0-rc.2",
+    "@mikro-orm/seeder": "^6.0.0-rc.2",
     "pg": "^8.11.3",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0"
